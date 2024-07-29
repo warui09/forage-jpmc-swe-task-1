@@ -1,0 +1,43 @@
+From aaba5886d88a5f074f28709ed300173ccabd8022 Mon Sep 17 00:00:00 2001
+From: Kevin Warui <waruimacharia@gmail.com>
+Date: Mon, 29 Jul 2024 11:58:50 +0300
+Subject: [PATCH] Update client_test.py
+
+---
+ __pycache__/client_test.cpython-311.pyc | Bin 3106 -> 3033 bytes
+ client_test.py                          |   4 ++--
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/__pycache__/client_test.cpython-311.pyc b/__pycache__/client_test.cpython-311.pyc
+index 8881dfe40fd280c90ac6171f11a2e9f4d33d10b5..974933b024385160934eb0986a80b16f600374f5 100644
+GIT binary patch
+delta 222
+zcmZ1^aZ{XkIWI340}w2WT%N|Zk#{*eD^o2~E%W4^?7HkA7E>+D<hSgqqRcfc%a|A#
+zRs%5v)Br^$t8*MxWi3(!iWDgUiCc{Ex7Z7cGLuu|6Jd;`VpgEc<Va2n#y68EaZWUr
+zQd^L=B5+COMM;Azk_H#q#2OMi1Uno%%I`|5;*gmf&XvTdKY16|MpXllH7vP_nR!LV
+cAZyh@gbI-O#bJ}1pHiBWYFA`Ac>?z&0KT$8i~s-t
+
+delta 276
+zcmca9zDR<1IWI340}#xLSe|CJk#{*eD|0PNE$if+?7Hl1wd}PVwVadRva5=+)^ILk
+zVqjPe#1K#e6q&5faWt2!ND(Mfqy!{xu@{%*Cuhee-r`QmOo=Zj%1llLaT1HO;T(3D
+zC{%3{vRWVqp*HCjRBci*$cYLdFj<h(g7NKSFV2Z3CJu}T*bWpP;k;<<b;a20BAY=&
+xdPnsP?-k;AjqP#BOy=WCVl<gt$hDEj6y#o(+{DbhB8$m-+!Bm-lij%|0RWe+S)2d>
+
+diff --git a/client_test.py b/client_test.py
+index 4673d9e..0d8d827 100644
+--- a/client_test.py
++++ b/client_test.py
+@@ -25,8 +25,8 @@ class ClientTest(unittest.TestCase):
+       {'top_ask': {'price': 121.2, 'size': 36}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 120.48, 'size': 109}, 'id': '0.109974697771', 'stock': 'ABC'},
+       {'top_ask': {'price': 121.68, 'size': 4}, 'timestamp': '2019-02-11 22:06:30.572453', 'top_bid': {'price': 117.87, 'size': 81}, 'id': '0.109974697771', 'stock': 'DEF'}
+     ]
+-      stock_a, bid_price_a, ask_price_a, price_a = getDataPoint(quotes[0])
+-      stock_b, bid_price_b, ask_price_b, price_b = getDataPoint(quotes[1])
++      _, _, _, price_a = getDataPoint(quotes[0])
++      _, _, _, price_b = getDataPoint(quotes[1])
+       self.assertEqual(getRatio(price_a, price_b), price_a / price_b)
+ 
+ 
+-- 
+2.39.2
+
